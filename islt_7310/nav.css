@@ -48,22 +48,28 @@ nav p {
 }
 
 .menu-dropdown {
+    visibility: hidden;
     list-style: none;
     padding: 16px 0;
     position: absolute;
+    right: -24px;
     display: none;
 }
 
-.menu-dropdown li {
-    margin: 8px auto;
+.dropdown-item {
+    background-color: rgb(95, 94, 144);
+    margin-bottom: 8px;
     width: 100px;
 }
 
-.menu-dropdown li a {
+.dropdown-item a {
     width: 100%;
 }
 
-.menu-dropdown > li:hover {
+nav ul li:hover > ul,
+ul li ul:hover {
+    visibility: visible;
+    opacity: 1;
     display: block;
 }
 
