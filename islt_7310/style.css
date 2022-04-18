@@ -14,3 +14,46 @@ body {
 .header-h1 {
     color: #54bab9;
 }
+
+.reflection-header {
+    text-align: center;
+    margin: 128px 0 32px;
+}
+
+.reflection-paragraph {
+    margin: 32px auto;
+    padding: 32px;
+    max-width: 800px;
+}
+
+.reflection-paragraph p {
+    margin: 0 0 40px;
+    line-height: 2.5;
+    text-indent: 50px;
+}
+
+.intro-paragraph {
+    text-indent: 0 !important;
+}
+
+.reflection-paragraph p span {
+    font-weight: 900;
+    font-size: 32px;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1;
+}
+
+.reflection-paragraph h2 {
+    text-align: center;
+    margin: 80px 0 32px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 64px;
+    text-align: center;
+    font-size: 14px;
+    margin: 256px 0 0;
+}
