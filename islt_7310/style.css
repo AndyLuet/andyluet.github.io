@@ -13,6 +13,7 @@ html {
 body {
   max-width: 1360px;
   padding: 0 32px;
+  height: 100%;
 }
 
 header {
@@ -40,32 +41,84 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  z-index: -3;
+  width: 100%;
+  max-width: 92%;
+  margin: 0 auto 240px;
+}
+
+main .about-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: -3;
-  width: 100%;
-  max-width: 90%;
-  margin: 0 auto;
+  line-height: 2;
+  margin: 0 64px 0 0;
+  padding: 16px;
 }
 
-.about-image {
+main .about-image img {
   border-radius: 50%;
   width: 460px;
   height: 460px;
-  margin: 0 64px 0 0;
+  margin: 0 0 32px;
 }
 
-.about-content {
+main .about-image blockquote {
+  font-weight: 600;
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+main .about-image blockquote em {
+  font-weight: 200;
+}
+
+main .about-image blockquote em:before {
+  content: "\A";
+  white-space: pre;
+}
+
+main .about-content {
   font-weight: 600;
   line-height: 2;
 }
 
-.about-content p {
-  margin-bottom: 16px;
+main .about-content h2 {
+  font-size: 28px;
+  color: #f05454;
+}
+
+main .about-content h3 {
+  font-size: 24px;
+  color: #f05454;
+}
+
+main .about-content p {
+  margin: 0 0 32px;
+}
+
+main .about-content h4 {
+  font-size: 24px;
+  color: #f05454;
+}
+
+main .about-content a {
+  color: white;
+  -webkit-text-decoration: underline 1px #f05454;
+          text-decoration: underline 1px #f05454;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+main .about-content a:hover {
+  background-color: #f05454;
 }
 
 .header-h1 {
@@ -103,5 +156,26 @@ main {
 .reflection-paragraph h2 {
   text-align: center;
   margin: 80px 0 32px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 64px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  background-color: #30475e;
+  bottom: -320px;
+  left: 0;
+  z-index: 20;
 }
 /*# sourceMappingURL=style.css.map */

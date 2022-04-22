@@ -12,6 +12,7 @@ html {
 body {
     max-width: 1360px;
     padding: 0 32px;
+    height: 100%;
 }
 
 header {
@@ -38,28 +39,62 @@ header {
 
 main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     z-index: -3;
     width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-    &-wrapper {
+    max-width: 92%;
+    margin: 0 auto 240px;
+    .about-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 2;
+        margin: 0 64px 0 0;
+        padding: 16px;
+        img {
+            border-radius: 50%;
+            width: 460px;
+            height: 460px;
+            margin: 0 0 32px;
+        }
+        blockquote {
+            font-weight: 600;
+            margin: 0 0 32px;
+            text-align: center;
+            em {
+                font-weight: 200;
+                &:before {
+                    content: "\A";
+                    white-space: pre;
+                }
+            }
+        }
     }
-}
-
-.about-image {
-    border-radius: 50%;
-    width: 460px;
-    height: 460px;
-    margin: 0 64px 0 0;
-}
-
-.about-content {
-    font-weight: 600;
-    line-height: 2;
-    p {
-        margin-bottom: 16px;
+    .about-content {
+        font-weight: 600;
+        line-height: 2;
+        h2 {
+            font-size: 28px;
+            color: #f05454;
+        }
+        h3 {
+            font-size: 24px;
+            color: #f05454;
+        }
+        p {
+            margin: 0 0 32px;
+        }
+        h4 {
+            font-size: 24px;
+            color: #f05454;
+        }
+        a {
+            color: white;
+            text-decoration: underline 1px #f05454;
+            transition: all 100ms ease-in-out;
+            &:hover {
+                background-color: #f05454;
+            }
+        }
     }
 }
 
@@ -100,12 +135,18 @@ main {
     margin: 80px 0 32px;
 }
 
-// footer {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     height: 64px;
-//     text-align: center;
-//     font-size: 14px;
-//     margin: 256px 0 0;
-// }
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 64px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    // margin: 256px 0 0;
+    background-color: #30475e;
+    bottom: -320px;
+    left: 0;
+    z-index: 20;
+}
