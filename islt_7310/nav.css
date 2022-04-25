@@ -3,7 +3,7 @@ nav {
   top: 0;
   left: 0;
   margin: 0 auto;
-  width: 100vw;
+  width: 100%;
   background-color: #30475e;
 }
 
@@ -19,13 +19,18 @@ nav {
           align-items: center;
   max-width: 1360px;
   width: 100%;
+  height: 80px;
 }
 
-nav p {
-  margin: 0;
+.navwrapper p {
+  margin: 0 0 0 16px;
 }
 
-.menu {
+.navwrapper div {
+  display: none;
+}
+
+.navwrapper .menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,8 +39,8 @@ nav p {
   padding: 16px 0;
 }
 
-.menu-item {
-  margin: 0 24px;
+.navwrapper .menu-item {
+  margin: 0 16px;
   background-color: #f05454;
   text-align: center;
   position: relative;
@@ -45,7 +50,7 @@ nav p {
   transition: all ease-in-out 100ms;
 }
 
-.menu-item a {
+.navwrapper .menu-item a {
   display: block;
   text-decoration: none;
   color: black;
@@ -58,23 +63,23 @@ nav p {
   transition: all ease-in-out 100ms;
 }
 
-.menu-item:hover {
+.navwrapper .menu-item:hover {
   background-color: transparent;
 }
 
-.menu-item:hover > ul {
+.navwrapper .menu-item:hover > ul {
   visibility: visible;
   background-color: #30475e;
   opacity: 1;
 }
 
-.menu-item:hover a {
+.navwrapper .menu-item:hover a {
   -webkit-transition: all ease-in-out 100ms;
   transition: all ease-in-out 100ms;
   color: white;
 }
 
-.menu-dropdown {
+.navwrapper .menu-dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -103,6 +108,98 @@ nav p {
   z-index: 3;
 }
 
+@media (max-width: 1000px) {
+  .navwrapper div {
+    display: block;
+    margin: 8px 16px 0 0;
+  }
+  .navwrapper div input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+  }
+  .navwrapper div input:checked ~ span {
+    opacity: 1;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .navwrapper div input:checked ~ span:nth-last-child(2) {
+    opacity: 0;
+    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+            transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  .navwrapper div input:checked ~ span:nth-last-child(1) {
+    -webkit-transform: rotate(-45deg) translate(-2px, -3px);
+            transform: rotate(-45deg) translate(-2px, -3px);
+  }
+  .navwrapper div span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #f05454;
+    border-radius: 3px;
+    z-index: 1;
+    -webkit-transform-origin: 4px 0px;
+            transform-origin: 4px 0px;
+    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+  .navwrapper div span:first-child {
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  .navwrapper div span:nth-last-child(2) {
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+  }
+  .navwrapper .menu {
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 30;
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    right: 0;
+    top: 64px;
+    display: none;
+    padding: 0 16px 16px;
+    background-color: #30475e;
+  }
+  .navwrapper .menu li {
+    margin: 16px 0 0;
+    width: 300px;
+  }
+  .navwrapper .menu li a {
+    width: 100%;
+  }
+  .navwrapper .menu li ul {
+    display: none;
+  }
+  .navwrapper .menu li:hover {
+    background-color: #30475e;
+  }
+}
+
+.displayblock {
+  display: block !important;
+}
+
 .fancy {
   font-weight: bold;
   font-size: 40px;
@@ -110,6 +207,7 @@ nav p {
   color: #f05454;
   -webkit-filter: drop-shadow(4px 4px 0px #000);
           filter: drop-shadow(4px 4px 0px #000);
+  margin-left: 16px;
 }
 
 .nav-background {

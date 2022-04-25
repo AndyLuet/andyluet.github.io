@@ -8,16 +8,36 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #222831;
   color: white;
+  height: 100vh;
 }
 
 body {
   max-width: 1360px;
-  padding: 0 32px;
-  height: 100%;
+  padding: 0 16px;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+  height: 20px;
+  background-color: #1d1d1d;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-track:vertical {
+  background-color: #3f3f3f;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
 }
 
 header {
-  margin: 160px 0 180px;
+  margin: 160px 0 0;
 }
 
 header h1 {
@@ -33,21 +53,33 @@ header .header-slant {
   height: 500px;
   width: 100%;
   top: 60px;
-  right: 0;
+  left: 0;
   z-index: -2;
 }
 
-main {
+@media (max-width: 600px) {
+  header {
+    margin: 140px 0 0;
+  }
+  header h1 {
+    font-size: 48px;
+  }
+  header .header-slant {
+    height: 400px;
+  }
+}
+
+.about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   z-index: -3;
   width: 100%;
   max-width: 92%;
-  margin: 0 auto 240px;
+  margin: 240px auto 180px;
 }
 
-main .about-image {
+.about .about-image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,53 +95,53 @@ main .about-image {
   padding: 16px;
 }
 
-main .about-image img {
+.about .about-image img {
   border-radius: 50%;
   width: 460px;
   height: 460px;
   margin: 0 0 32px;
 }
 
-main .about-image blockquote {
+.about .about-image blockquote {
   font-weight: 600;
   margin: 0 0 32px;
   text-align: center;
 }
 
-main .about-image blockquote em {
+.about .about-image blockquote em {
   font-weight: 200;
 }
 
-main .about-image blockquote em:before {
+.about .about-image blockquote em:before {
   content: "\A";
   white-space: pre;
 }
 
-main .about-content {
+.about .about-content {
   font-weight: 600;
   line-height: 2;
 }
 
-main .about-content h2 {
+.about .about-content h2 {
   font-size: 28px;
   color: #f05454;
 }
 
-main .about-content h3 {
+.about .about-content h3 {
   font-size: 24px;
   color: #f05454;
 }
 
-main .about-content p {
+.about .about-content p {
   margin: 0 0 32px;
 }
 
-main .about-content h4 {
+.about .about-content h4 {
   font-size: 24px;
   color: #f05454;
 }
 
-main .about-content a {
+.about .about-content a {
   color: white;
   -webkit-text-decoration: underline 1px #f05454;
           text-decoration: underline 1px #f05454;
@@ -117,17 +149,87 @@ main .about-content a {
   transition: all 100ms ease-in-out;
 }
 
-main .about-content a:hover {
+.about .about-content a:hover {
   background-color: #f05454;
 }
 
-.header-h1 {
-  color: #54bab9;
+@media (max-width: 1215px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 180px;
+  }
+  .about .about-image {
+    margin: 0;
+  }
+  .about .about-image img {
+    width: 300px;
+    height: 300px;
+  }
+  .about .about-content {
+    max-width: 600px;
+  }
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -3;
+  width: 100%;
+  max-width: 92%;
+  margin: 100px auto 180px;
+}
+
+.home .introduction {
+  text-align: center;
+  margin: 32px 0;
+  font-weight: 900;
+}
+
+.home .introduction span {
+  color: #f05454;
+}
+
+.home h3 {
+  font-size: 32px;
+  margin: 64px 0 32px;
+  text-align: center;
+}
+
+.home .goals {
+  margin: 0 0 52px;
+  max-width: 800px;
+  line-height: 2;
 }
 
 .reflection-header {
   text-align: center;
-  margin: 128px 0 32px;
+  margin: 160px 0 120px;
+}
+
+@media (max-width: 638px) {
+  .reflection-header h1 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 638px) {
+  .reflection-header h1 {
+    font-size: 32px;
+  }
 }
 
 .reflection-paragraph {
@@ -168,14 +270,10 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: absolute;
   height: 64px;
   width: 100%;
   text-align: center;
   font-size: 14px;
   background-color: #30475e;
-  bottom: -320px;
-  left: 0;
-  z-index: 20;
 }
 /*# sourceMappingURL=style.css.map */
