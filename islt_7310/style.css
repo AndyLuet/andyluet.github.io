@@ -8,13 +8,20 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #222831;
   color: white;
-  height: 100vh;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 1360px;
   padding: 0 16px;
   width: 100%;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -190,7 +197,7 @@ header .header-slant {
   z-index: -3;
   width: 100%;
   max-width: 92%;
-  margin: 100px auto 180px;
+  margin: 180px auto;
 }
 
 .home .introduction {
@@ -275,5 +282,34 @@ footer {
   text-align: center;
   font-size: 14px;
   background-color: #30475e;
+  margin-top: auto;
+}
+
+footer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div img {
+  margin: 0 8px;
+  -webkit-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+footer div img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+footer div p {
+  margin: 0 0 0 16px;
 }
 /*# sourceMappingURL=style.css.map */
