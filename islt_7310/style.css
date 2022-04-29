@@ -24,6 +24,41 @@ body {
   min-height: 100vh;
 }
 
+@media print {
+  body * {
+    margin: 0 !important;
+    color: #000 !important;
+    text-decoration: none !important;
+  }
+  body body {
+    margin: 72px !important;
+  }
+  body nav {
+    display: none;
+    height: 0;
+  }
+  body header {
+    display: none;
+    height: 0;
+    margin: 0;
+  }
+  body main {
+    margin: 0;
+  }
+  body main .about-image {
+    display: none;
+  }
+  body main .about-image img {
+    display: none;
+  }
+  body main .about-image blockquote {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  body footer img {
+    width: 0;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 9px;
   height: 9px;

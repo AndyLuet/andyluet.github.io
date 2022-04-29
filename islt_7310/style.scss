@@ -16,6 +16,43 @@ body {
     padding: 0 16px;
     width: 100%;
     min-height: 100vh;
+    @media print {
+        * {
+            margin: 0 !important;
+            color: #000 !important;
+            text-decoration: none !important;
+        }
+        body {
+            margin: 72px !important;
+        }
+        nav {
+            display: none;
+            height: 0;
+        }
+        header {
+            display: none;
+            height: 0;
+            margin: 0;
+        }
+        main {
+            margin: 0;
+            .about-image {
+                display: none;
+                img {
+                    display: none;
+                }
+                blockquote {
+                    font-family: "Gill Sans", "Gill Sans MT", Calibri,
+                        "Trebuchet MS", sans-serif;
+                }
+            }
+        }
+        footer {
+            img {
+                width: 0;
+            }
+        }
+    }
 }
 
 ::-webkit-scrollbar {
