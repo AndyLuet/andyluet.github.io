@@ -108,57 +108,56 @@ nav {
   z-index: 3;
 }
 
+.navwrapper .nav-toggle {
+  visibility: hidden;
+}
+
 @media (max-width: 1000px) {
-  .navwrapper div {
-    display: block;
-    margin: 8px 16px 0 0;
+  .navwrapper .menu {
+    clear: both;
+    -webkit-transition: max-height 0.2s ease-out;
+    transition: max-height 0.2s ease-out;
   }
-  .navwrapper div input {
-    display: block;
-    width: 40px;
-    height: 32px;
+  .navwrapper .menu-icon {
     cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-    position: absolute;
-  }
-  .navwrapper div input:checked ~ span {
-    opacity: 1;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-  }
-  .navwrapper div input:checked ~ span:nth-last-child(2) {
-    opacity: 0;
-    -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-            transform: rotate(0deg) scale(0.2, 0.2);
-  }
-  .navwrapper div input:checked ~ span:nth-last-child(1) {
-    -webkit-transform: rotate(-45deg) translate(-2px, -3px);
-            transform: rotate(-45deg) translate(-2px, -3px);
-  }
-  .navwrapper div span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    margin-right: 8px;
     position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  .navwrapper .menu-icon .navicon {
     background: #f05454;
-    border-radius: 3px;
-    z-index: 1;
-    -webkit-transform-origin: 4px 0px;
-            transform-origin: 4px 0px;
-    -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+    display: block;
+    height: 2px;
+    position: relative;
+    -webkit-transition: background 0.2s ease-out;
+    transition: background 0.2s ease-out;
+    width: 24px;
   }
-  .navwrapper div span:first-child {
-    -webkit-transform-origin: 0% 0%;
-            transform-origin: 0% 0%;
+  .navwrapper .navicon:after,
+  .navwrapper .navicon:before {
+    background: #f05454;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    width: 100%;
   }
-  .navwrapper div span:nth-last-child(2) {
-    -webkit-transform-origin: 0% 100%;
-            transform-origin: 0% 100%;
+  .navwrapper .menu-icon .navicon:before {
+    top: 8px;
+  }
+  .navwrapper .menu-icon .navicon:after {
+    top: -8px;
+  }
+  .navwrapper .menu-btn {
+    display: none;
   }
   .navwrapper .menu {
     position: absolute;
@@ -196,8 +195,25 @@ nav {
   }
 }
 
-.displayblock {
-  display: block !important;
+.nav-toggle:checked ~ span {
+  opacity: 1;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.nav-toggle:checked ~ span:nth-last-child(2) {
+  opacity: 0;
+  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
+          transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.nav-toggle:checked ~ span:nth-last-child(1) {
+  -webkit-transform: rotate(-45deg) translate(-2px, -3px);
+          transform: rotate(-45deg) translate(-2px, -3px);
+}
+
+.nav-toggle:checked ~ .menu {
+  display: block;
 }
 
 .fancy {
