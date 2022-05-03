@@ -124,26 +124,5 @@
                 </p>
             </div>
         </footer>
-
-        <script>
-            const navToggleRef = document.querySelector(".nav-toggle");
-            const menuRef = document.querySelector(".menu");
-
-            console.log("YO");
-
-            function checkedBox() {
-                let isMenuOpen = navToggleRef.checked;
-
-                console.log("isMenuOpen", isMenuOpen);
-
-                if (isMenuOpen == true) {
-                    menuRef.classList.add("displayblock");
-                } else {
-                    menuRef.classList.remove("displayblock");
-                }
-            }
-
-            navToggleRef.addEventListener("click", checkedBox);
-        </script>
     </body>
 </html>
