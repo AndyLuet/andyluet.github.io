@@ -336,3 +336,63 @@ footer {
         }
     }
 }
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px 64px;
+    max-width: 800px;
+    &-form {
+        margin: 200px 0 0;
+        max-width: 800px;
+        input {
+            height: 45px;
+            width: 100%;
+            margin: 0 0 32px;
+            padding: 0 16px;
+            background-color: #30475e;
+            border: none;
+            border-bottom: 2px solid #f05454;
+            border-left: 2px solid #f05454;
+            color: white;
+        }
+        textarea {
+            width: 100%;
+            padding: 16px;
+            resize: none;
+            background-color: #30475e;
+            border: none;
+            border-bottom: 2px solid #f05454;
+            border-left: 2px solid #f05454;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            margin: 128px 0 0;
+        }
+    }
+    button {
+        background-color: black;
+        border: solid 1px #f05454;
+        margin: 32px 0 0;
+        padding: 16px;
+        text-align: center;
+        cursor: pointer;
+        text-decoration: none;
+        width: 100%;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 200ms ease-in-out;
+        align-self: baseline;
+        &:hover {
+            transition: all 200ms ease-in-out;
+            transform: translateX(8px);
+            border-left: solid 8px #f05454;
+            color: #f05454;
+        }
+        @media (min-width: 43em) {
+            max-width: 256px;
+        }
+    }
+}

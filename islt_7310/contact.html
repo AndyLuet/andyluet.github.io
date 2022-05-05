@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <!--
-        Home Page
-        Landing page of the site
+        About page
+        Contact page of the site
         Andrew Luetkemeier
         Mizzou, Spring 2022
         Mar 25, 2022
@@ -10,7 +10,9 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Home Page</title>
+        <title>Contact Page</title>
+        <link rel="icon" type="image/png" href="./favicon-32x32.png" />
+
         <link rel="stylesheet" href="./style.css" />
         <link rel="stylesheet" href="./nav.css" />
     </head>
@@ -57,25 +59,20 @@
         </nav>
 
         <header>
-            <h1>Andrew Luetkemeier</h1>
+            <h1>Contact Me</h1>
             <div class="header-slant"></div>
         </header>
 
-        <main class="home">
-            <p class="introduction">
-                Hello! I'm <span>Andrew</span>. I'm a UX/UI Designer and
-                Illustrator with a passion for clean, minimalistic design.
-            </p>
-            <h3>Goals</h3>
-            <p class="goals">
-                My goal for this website is to showcase my skills as a designer
-                to help aid me in searching for jobs. I want to show potential
-                employers what I am capable of and why they should hire me. I
-                hope to be able to showcase some of the previous UX/UI design
-                work I have done, as well as some illustrations I have made. I
-                would like there to be a unique "about me" section showcasing
-                things that I am interested in.
-            </p>
+        <main class="contact" id="contact">
+            <form class="contact-form" action="https://formsubmit.co/andrewwluetkemeier@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="Firstname" required></input>
+                <input type="text" name="last-name" placeholder="Lastname" required></input>
+                <input type="email" name="email" placeholder="Email" required></input>
+                <textarea type="text" placeholder="Your message..." cols="30" rows="8" name="message" required></textarea>
+                <input type="hidden" name="_next" value="andyportfoliosite"></input>
+                <input type="hidden" name="_template" value="table">
+            <button type="submit">Send</a>
+            </form>
         </main>
 
         <footer>
