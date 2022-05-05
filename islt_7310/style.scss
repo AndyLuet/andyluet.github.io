@@ -396,3 +396,82 @@ footer {
         }
     }
 }
+
+table {
+    border: 2px solid #f05454;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+    margin: 64px auto 128px;
+    max-width: 760px;
+    caption {
+        font-size: 1.5em;
+        margin: 0.5em 0 0.75em;
+    }
+    tr {
+        background-color: #30475e;
+        border: 2px solid #f05454;
+        padding: 0.35em;
+    }
+    thead {
+        tr:nth-child(1) {
+            background-color: #7e1818;
+        }
+    }
+    tbody {
+        tr:nth-child(2) {
+            background-color: #496b8d;
+        }
+        tr:nth-child(4) {
+            background-color: #7e1818;
+        }
+    }
+    th,
+    td {
+        padding: 0.625em;
+        text-align: center;
+    }
+    th {
+        font-size: 0.85em;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    @media screen and (max-width: 600px) {
+        border: 0;
+        caption {
+            font-size: 1.3em;
+        }
+        thead {
+            border: none;
+            clip: rect(0 0 0 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+        tr {
+            border-bottom: 3px solid #f05454;
+            display: block;
+            margin-bottom: 0.625em;
+        }
+        td {
+            border-bottom: 2px solid #f05454;
+            display: block;
+            font-size: 0.8em;
+            text-align: right;
+        }
+        td::before {
+            content: attr(data-label);
+            float: left;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        td:last-child {
+            border-bottom: 0;
+        }
+    }
+}
